@@ -22,9 +22,19 @@
         padding: 0
     }
 
+    span.letter-miss {
+        background-color: #3a3a3c;
+        height: 5px;
+        width: 5px;
+    }
+
     .letters input.letter-miss {
         background-color: #3a3a3c;
         color: #fff;
+    }
+
+    span.letter-close {
+        background-color: #b59f3b;
     }
 
     .letters input.letter-close {
@@ -32,6 +42,9 @@
         color: #fff;
     }
 
+    span.letter-hit {
+        background-color: #538d4e;
+    }
     .letters input.letter-hit {
         background-color: #538d4e;
         color: #fff;
@@ -50,196 +63,216 @@
                 <h1>Wordle Hints</h1>
            </header>
             <section class="hero bd-hero bd-is-basic">
-                <table class="table letters" style="max-width: 500px;">
-                    <thead>
-                      <tr>
-                        <th align="center"><abbr title="Letter 1">1</abbr></th>
-                        <th align="center"><abbr title="Letter 2">2</abbr></th>
-                        <th align="center"><abbr title="Letter 3">3</abbr></th>
-                        <th align="center"><abbr title="Letter 4">4</abbr></th>
-                        <th align="center"><abbr title="Letter 5">5</abbr></th>
-                      </tr>
-                    </thead>                   
-                    <tbody>
-                      <tr class='row'>
-                        <td>
-                            <input autofocus type="text" id="word1letter1" name="word1" value="" maxlength="1" class="input is-primary"
-                                onblur="setDefaultColor(this)" 
-                                onclick="setColor(this)">
-                        </td>
-                        <td>
-                            <input type="text"  id="word1letter2" name="word1" value=""  maxlength="1" class="input is-primary"
-                                onblur="setDefaultColor(this)" 
-                                onclick="setColor(this)">
-                        </td>
-                        <td>
-                            <input type="text"  id="word1letter3" name="word1" value=""  maxlength="1" class="input is-primary"
-                                onblur="setDefaultColor(this)" 
-                                onclick="setColor(this)">
-                        </td>
-                        <td>
-                            <input type="text"  id="word1letter4" name="word1" value=""  maxlength="1" class="input is-primary"
-                                onblur="setDefaultColor(this)" 
-                                onclick="setColor(this)">
-                        </td>
-                        <td>
-                            <input type="text"  id="word1letter5" name="word1" value=""  maxlength="1" class="input is-primary"
-                                onblur="setDefaultColor(this)" 
-                                onclick="setColor(this)">
-                        </td>
-                      </tr>
-
-                      <tr class='row'>
-                        <td>
-                            <input type="text"  id="word2letter1" name="word2" value=""  maxlength="1" class="input is-primary"
-                                onblur="setDefaultColor(this)" 
-                                onclick="setColor(this)">
-                        </td>
-                        <td>
-                            <input type="text"  id="word2letter2" name="word2" value=""  maxlength="1" class="input is-primary"
-                                onblur="setDefaultColor(this)" 
-                                onclick="setColor(this)">
-                        </td>
-                        <td>
-                            <input type="text"  id="word2letter3" name="word2" value=""  maxlength="1" class="input is-primary"
-                                onblur="setDefaultColor(this)" 
-                                onclick="setColor(this)">
-                        </td>
-                        <td>
-                            <input type="text"  id="word2letter4" name="word2" value=""  maxlength="1" class="input is-primary"
-                                onblur="setDefaultColor(this)" 
-                                onclick="setColor(this)">
-                        </td>
-                        <td>
-                            <input type="text"  id="word2letter5" name="word2" value=""  maxlength="1" class="input is-primary"
-                                onblur="setDefaultColor(this)" 
-                                onclick="setColor(this)">
-                        </td>
-                      </tr>
-
-                      <tr class='row'>
-                        <td>
-                            <input type="text"  id="word3letter1" name="word3" value=""  maxlength="1" class="input is-primary"
-                                onblur="setDefaultColor(this)" 
-                                onclick="setColor(this)">
-                        </td>
-                        <td>
-                            <input type="text"  id="word3letter2" name="word3" value=""  maxlength="1" class="input is-primary"
-                                onblur="setDefaultColor(this)" 
-                                onclick="setColor(this)">
-                        </td>
-                        <td>
-                            <input type="text"  id="word3letter3" name="word3" value=""  maxlength="1" class="input is-primary"
-                                onblur="setDefaultColor(this)" 
-                                onclick="setColor(this)">
-                        </td>
-                        <td>
-                            <input type="text"  id="word3letter4" name="word3" value=""  maxlength="1" class="input is-primary"
-                                onblur="setDefaultColor(this)" 
-                                onclick="setColor(this)">
-                        </td>
-                        <td>
-                            <input type="text"  id="word3letter5" name="word3" value=""  maxlength="1" class="input is-primary"
-                                onblur="setDefaultColor(this)" 
-                                onclick="setColor(this)">
-                        </td>
-                      </tr>
-
-                      <tr class='row'>
-                        <td>
-                            <input type="text"  id="word4letter1" name="word4" value=""  maxlength="1" class="input is-primary"
-                                onblur="setDefaultColor(this)" 
-                                onclick="setColor(this)">
-                        </td>
-                        <td>
-                            <input type="text"  id="word4letter2" name="word4" value=""  maxlength="1" class="input is-primary"
-                                onblur="setDefaultColor(this)" 
-                                onclick="setColor(this)">
-                        </td>
-                        <td>
-                            <input type="text"  id="word4letter3" name="word4" value=""  maxlength="1" class="input is-primary"
-                                onblur="setDefaultColor(this)" 
-                                onclick="setColor(this)">
-                        </td>
-                        <td>
-                            <input type="text"  id="word4letter4" name="word4" value=""  maxlength="1" class="input is-primary"
-                                onblur="setDefaultColor(this)" 
-                                onclick="setColor(this)">
-                        </td>
-                        <td>
-                            <input type="text"  id="word4letter5" name="word4" value=""  maxlength="1" class="input is-primary"
-                                onblur="setDefaultColor(this)" 
-                                onclick="setColor(this)">
-                        </td>
-                      </tr>
-
-                      <tr class='row'>
-                        <td>
-                            <input type="text"  id="word5letter1" name="word5" value=""  maxlength="1" class="input is-primary"
-                                onblur="setDefaultColor(this)" 
-                                onclick="setColor(this)">
-                        </td>
-                        <td>
-                            <input type="text"  id="word5letter2" name="word5" value=""  maxlength="1" class="input is-primary"
-                                onblur="setDefaultColor(this)" 
-                                onclick="setColor(this)">
-                        </td>
-                        <td>
-                            <input type="text"  id="word5letter3" name="word5" value=""  maxlength="1" class="input is-primary"
-                                onblur="setDefaultColor(this)" 
-                                onclick="setColor(this)">
-                        </td>
-                        <td>
-                            <input type="text"  id="word5letter4" name="word5" value=""  maxlength="1" class="input is-primary"
-                                onblur="setDefaultColor(this)" 
-                                onclick="setColor(this)">
-                        </td>
-                        <td>
-                            <input type="text"  id="word5letter5" name="word5" value=""  maxlength="1" class="input is-primary"
-                                onblur="setDefaultColor(this)" 
-                                onclick="setColor(this)">
-                        </td>
-                      </tr>
-
-                      <tr class='row'>
-                        <td>
-                            <input type="text"  id="word6letter1" name="word6" value=""  maxlength="1" class="input is-primary"
-                                onblur="setDefaultColor(this)" 
-                                onclick="setColor(this)">
-                        </td>
-                        <td>
-                            <input type="text"  id="word6letter2" name="word6" value=""  maxlength="1" class="input is-primary"
-                                onblur="setDefaultColor(this)" 
-                                onclick="setColor(this)">
-                        </td>
-                        <td>
-                            <input type="text"  id="word6letter3" name="word6" value=""  maxlength="1" class="input is-primary"
-                                onblur="setDefaultColor(this)" 
-                                onclick="setColor(this)">
-                        </td>
-                        <td>
-                            <input type="text"  id="word6letter4" name="word6" value=""  maxlength="1" class="input is-primary"
-                                onblur="setDefaultColor(this)" 
-                                onclick="setColor(this)">
-                        </td>
-                        <td>
-                            <input type="text"  id="word6letter5" name="word6" value=""  maxlength="1" class="input is-primary"
-                                onblur="setDefaultColor(this)" 
-                                onclick="setColor(this)">
-                        </td>
-                      </tr>
-
-                    </tbody>
-                </table>
-
-            <div>
-                <div class="control">
-                  <button class="button is-link is-light" onclick="findWords()">Find Words</button>
-                  <button class="button is-link is-light" onclick="reset()">Reset</button>
+                <div class="columns">
+                    <div class="column">
+                        <table class="table letters" style="width: 500px;">
+                            <thead>
+                              <tr>
+                                <th colspan="5">Type a letter.  Click to color. Find words.</th>
+                              </tr>
+                            </thead>
+                            <tfoot>
+                                <td colspan="5">
+                                    <div class="columns">
+                                        <div class="column">
+                                        <span>
+                                            <span class="letter-miss">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                                            <span>Miss</span>
+                                          </span> 
+                                          <span>
+                                            <span class="letter-close">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                                            <span>Wrong Spot</span>
+                                          </span>
+                                          <span>
+                                            <span class="letter-hit">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                                            <span>Hit</span>
+                                          </span>
+                                        </div>
+                                        <div class="column control">
+                                            <div class="control is-pulled-right">
+                                            <button class="button is-link is-light" onclick="findWords()">Find Words</button>
+                                            <button class="button is-link is-light" onclick="reset()">Reset</button>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tfoot>
+                            <tbody>
+                              <tr class='row'>
+                                <td>
+                                    <input autofocus type="text" id="word1letter1" name="word1" value="" maxlength="1" class="input is-primary"
+                                        onblur="setDefaultColor(this)" 
+                                        onclick="setColor(this)">
+                                </td>
+                                <td>
+                                    <input type="text"  id="word1letter2" name="word1" value=""  maxlength="1" class="input is-primary"
+                                        onblur="setDefaultColor(this)" 
+                                        onclick="setColor(this)">
+                                </td>
+                                <td>
+                                    <input type="text"  id="word1letter3" name="word1" value=""  maxlength="1" class="input is-primary"
+                                        onblur="setDefaultColor(this)" 
+                                        onclick="setColor(this)">
+                                </td>
+                                <td>
+                                    <input type="text"  id="word1letter4" name="word1" value=""  maxlength="1" class="input is-primary"
+                                        onblur="setDefaultColor(this)" 
+                                        onclick="setColor(this)">
+                                </td>
+                                <td>
+                                    <input type="text"  id="word1letter5" name="word1" value=""  maxlength="1" class="input is-primary"
+                                        onblur="setDefaultColor(this)" 
+                                        onclick="setColor(this)">
+                                </td>
+                              </tr>
+        
+                              <tr class='row'>
+                                <td>
+                                    <input type="text"  id="word2letter1" name="word2" value=""  maxlength="1" class="input is-primary"
+                                        onblur="setDefaultColor(this)" 
+                                        onclick="setColor(this)">
+                                </td>
+                                <td>
+                                    <input type="text"  id="word2letter2" name="word2" value=""  maxlength="1" class="input is-primary"
+                                        onblur="setDefaultColor(this)" 
+                                        onclick="setColor(this)">
+                                </td>
+                                <td>
+                                    <input type="text"  id="word2letter3" name="word2" value=""  maxlength="1" class="input is-primary"
+                                        onblur="setDefaultColor(this)" 
+                                        onclick="setColor(this)">
+                                </td>
+                                <td>
+                                    <input type="text"  id="word2letter4" name="word2" value=""  maxlength="1" class="input is-primary"
+                                        onblur="setDefaultColor(this)" 
+                                        onclick="setColor(this)">
+                                </td>
+                                <td>
+                                    <input type="text"  id="word2letter5" name="word2" value=""  maxlength="1" class="input is-primary"
+                                        onblur="setDefaultColor(this)" 
+                                        onclick="setColor(this)">
+                                </td>
+                              </tr>
+        
+                              <tr class='row'>
+                                <td>
+                                    <input type="text"  id="word3letter1" name="word3" value=""  maxlength="1" class="input is-primary"
+                                        onblur="setDefaultColor(this)" 
+                                        onclick="setColor(this)">
+                                </td>
+                                <td>
+                                    <input type="text"  id="word3letter2" name="word3" value=""  maxlength="1" class="input is-primary"
+                                        onblur="setDefaultColor(this)" 
+                                        onclick="setColor(this)">
+                                </td>
+                                <td>
+                                    <input type="text"  id="word3letter3" name="word3" value=""  maxlength="1" class="input is-primary"
+                                        onblur="setDefaultColor(this)" 
+                                        onclick="setColor(this)">
+                                </td>
+                                <td>
+                                    <input type="text"  id="word3letter4" name="word3" value=""  maxlength="1" class="input is-primary"
+                                        onblur="setDefaultColor(this)" 
+                                        onclick="setColor(this)">
+                                </td>
+                                <td>
+                                    <input type="text"  id="word3letter5" name="word3" value=""  maxlength="1" class="input is-primary"
+                                        onblur="setDefaultColor(this)" 
+                                        onclick="setColor(this)">
+                                </td>
+                              </tr>
+        
+                              <tr class='row'>
+                                <td>
+                                    <input type="text"  id="word4letter1" name="word4" value=""  maxlength="1" class="input is-primary"
+                                        onblur="setDefaultColor(this)" 
+                                        onclick="setColor(this)">
+                                </td>
+                                <td>
+                                    <input type="text"  id="word4letter2" name="word4" value=""  maxlength="1" class="input is-primary"
+                                        onblur="setDefaultColor(this)" 
+                                        onclick="setColor(this)">
+                                </td>
+                                <td>
+                                    <input type="text"  id="word4letter3" name="word4" value=""  maxlength="1" class="input is-primary"
+                                        onblur="setDefaultColor(this)" 
+                                        onclick="setColor(this)">
+                                </td>
+                                <td>
+                                    <input type="text"  id="word4letter4" name="word4" value=""  maxlength="1" class="input is-primary"
+                                        onblur="setDefaultColor(this)" 
+                                        onclick="setColor(this)">
+                                </td>
+                                <td>
+                                    <input type="text"  id="word4letter5" name="word4" value=""  maxlength="1" class="input is-primary"
+                                        onblur="setDefaultColor(this)" 
+                                        onclick="setColor(this)">
+                                </td>
+                              </tr>
+        
+                              <tr class='row'>
+                                <td>
+                                    <input type="text"  id="word5letter1" name="word5" value=""  maxlength="1" class="input is-primary"
+                                        onblur="setDefaultColor(this)" 
+                                        onclick="setColor(this)">
+                                </td>
+                                <td>
+                                    <input type="text"  id="word5letter2" name="word5" value=""  maxlength="1" class="input is-primary"
+                                        onblur="setDefaultColor(this)" 
+                                        onclick="setColor(this)">
+                                </td>
+                                <td>
+                                    <input type="text"  id="word5letter3" name="word5" value=""  maxlength="1" class="input is-primary"
+                                        onblur="setDefaultColor(this)" 
+                                        onclick="setColor(this)">
+                                </td>
+                                <td>
+                                    <input type="text"  id="word5letter4" name="word5" value=""  maxlength="1" class="input is-primary"
+                                        onblur="setDefaultColor(this)" 
+                                        onclick="setColor(this)">
+                                </td>
+                                <td>
+                                    <input type="text"  id="word5letter5" name="word5" value=""  maxlength="1" class="input is-primary"
+                                        onblur="setDefaultColor(this)" 
+                                        onclick="setColor(this)">
+                                </td>
+                              </tr>
+        
+                              <tr class='row'>
+                                <td>
+                                    <input type="text"  id="word6letter1" name="word6" value=""  maxlength="1" class="input is-primary"
+                                        onblur="setDefaultColor(this)" 
+                                        onclick="setColor(this)">
+                                </td>
+                                <td>
+                                    <input type="text"  id="word6letter2" name="word6" value=""  maxlength="1" class="input is-primary"
+                                        onblur="setDefaultColor(this)" 
+                                        onclick="setColor(this)">
+                                </td>
+                                <td>
+                                    <input type="text"  id="word6letter3" name="word6" value=""  maxlength="1" class="input is-primary"
+                                        onblur="setDefaultColor(this)" 
+                                        onclick="setColor(this)">
+                                </td>
+                                <td>
+                                    <input type="text"  id="word6letter4" name="word6" value=""  maxlength="1" class="input is-primary"
+                                        onblur="setDefaultColor(this)" 
+                                        onclick="setColor(this)">
+                                </td>
+                                <td>
+                                    <input type="text"  id="word6letter5" name="word6" value=""  maxlength="1" class="input is-primary"
+                                        onblur="setDefaultColor(this)" 
+                                        onclick="setColor(this)">
+                                </td>
+                              </tr>
+        
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="column">
+                        <div id="wordmatch" />
+                    </div>
                 </div>
-              </div>
-            <hr />
-            <div id="wordmatch" />
             </section>
         </div>
      <main>  
